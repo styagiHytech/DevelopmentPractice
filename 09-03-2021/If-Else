@@ -1,5 +1,5 @@
 trigger AssignLead on Lead(before insert, before update){
-    for (myLead : Trigger.new) {
+    for (Lead mylead : Trigger.new) {
         if (mylead.Score__c !=null){
             if (mylead.Score__c == 100) {
             mylead.Grade__c = 'A+';
