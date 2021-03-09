@@ -1,0 +1,14 @@
+test class Apple watch
+
+@isTest
+public class AppleWatchTest {
+    
+    @isTest static void createOpportunity() {
+        opportunity opp =new opportunity();
+        opp.Name = 'saurav';
+        opp.StageName = 'prospecting';
+        opp.CloseDate = Date.today();
+        insert opp;
+    }
+
+}
