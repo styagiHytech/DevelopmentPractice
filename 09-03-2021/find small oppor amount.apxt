@@ -1,0 +1,9 @@
+trigger FindSmallestNewDeal on Opportunity (before insert) {
+    List<Decimal> oppAmounts = new List<Decimal>();
+    for (Opportunity opp : 	Trigger.new){
+        OppAmount.add(opp.Amount);
+    }
+    oppAmounts.sort();
+    oppAmounts.get(0);
+
+}
