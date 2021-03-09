@@ -1,11 +1,11 @@
-trigger AssignLead on Lead(before insert, before pdate){
-    for (Lead : Trigger.new) {
+trigger AssignLead on Lead(before insert, before update){
+    for (myLead : Trigger.new) {
         if (mylead.Score__c !=null){
             if (mylead.Score__c == 100) {
             mylead.Grade__c = 'A+';
-        } else if (mylead.Score__c >= 90);{
+        } else if (mylead.Score__c >= 90){
              mylead.Grade__c = 'A';
-    } else if (mylead.Score__c >= 80);{
+    } else if (mylead.Score__c >= 80){
         mylead.Grade__c = 'B';
         } else {
     mylead.Grade__c = 'F';
