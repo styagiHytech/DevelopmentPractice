@@ -1,0 +1,19 @@
+trigger LeadingCompetitor on Opportunity (before insert,before update) {
+    for (Opportunity opp : Trigger.new){
+        List<Decimal> CompetitorPrice = new List<Decimal>();
+        CompetitorPrice.add(opp.Competitor_1_Price__c);
+        CompetitorPrice.add(opp.Competitor_2_Price__c);
+        CompetitorPrice.add(opp.Competitor_3_Price__c);
+        List<String> Competitor = new List<String>();
+        competitor.add(opp.competitor_1__C);
+        competitor.add(opp.competitor_1__C);
+        competitor.add(opp.competitor_1__C);
+        Decimal lowestPrice;
+        for(Integer i= 0; i < CompetitorPrice.size(); i++){
+            Decimal currentPrice = CompetitorPrice.get(i);
+            if (lowestPrice == null || currentPrice < lowestPrice){
+                lowestPrice = currentPrice;
+            }
+        }
+    }
+}
