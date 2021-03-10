@@ -3,4 +3,4 @@ trigger HelloWorld on Lead (before update) {
         l.FirstName = 'Hello';
         l.LastName = 'world';
     }
-}
+}  
