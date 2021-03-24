@@ -6,7 +6,7 @@ private class CommonTestSetup
  {
   Account acct = new Account();
        acc.Name = 'Salesforce';
-       acc.Industry = 'Technology';
+       acc.Industry = 'Tech';
   insert acc;
   
   Contact con = new Contact();
