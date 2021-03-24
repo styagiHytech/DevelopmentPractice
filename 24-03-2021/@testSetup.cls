@@ -12,7 +12,7 @@ private class CommonTestSetup
   Contact con = new Contact();
        con.FirstName = 'Saurav';
        con.LastName = 'Tyagi';
-       con.AccountId = acct.Id;
+       con.AccountId = acc.Id;
   insert con;
  }
     
