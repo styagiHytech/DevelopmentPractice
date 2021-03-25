@@ -2,7 +2,7 @@ global class TaxUpdate implements Database.Batchable<sObject> {
    
    global final String Query;
     global final String field;
-    global final String value;
+    global final Integer value;
 
     global TaxUpdate(String q, String f , Integer v){
 
