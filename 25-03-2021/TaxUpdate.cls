@@ -9,7 +9,7 @@ global class TaxUpdate implements Database.Batchable<sObject> {
         Query=q; field=f; value=v;
     }
 
-    global.Database.QueryLocator start(Database.BatchableContext Bc){
+    global Database.QueryLocator start(Database.BatchableContext Bc){
         return Database.getQueryLocator(query);
     }
 
